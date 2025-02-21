@@ -13,6 +13,18 @@ local colors = {
 ]]
 local Window = Library.CreateLib("Тюрьма РП", "RJTheme3")
 
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("By BoBkaMopkoBka")
+
+Section:NewSlider("Скорость", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("Прыжок", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+
+
+
 local Tab = Window:NewTab("Teleport")
 
 local Section = Tab:NewSection("By BoBkaMopkoBka")
